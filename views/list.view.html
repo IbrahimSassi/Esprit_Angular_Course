@@ -1,0 +1,31 @@
+<div >
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="search" type="text" ng-model="searchText" class="validate"><br>
+            <label for="search"><i class="fa fa-search" aria-hidden="true"></i>
+                Search For User</label>
+
+        </div>
+        <ul ng-repeat="person in people | filter:searchText" class="collection">
+            <li class="collection-item avatar">
+                <img src="{{person.image}}" alt="" class="circle" ng-if="person.image">
+                <img src="../img/default.png" alt="" class="circle" ng-if="!person.image">
+                <h5 style="font-weight: bold">
+                    {{person.name | capitalize}}
+                </h5>
+                <p>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+
+                    Country : {{person.country}} <br>
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    Salary : {{person.salary}}
+                </p>
+                <a href="#users/{{person.id}}">See Details</a>
+            </li>
+        </ul>
+    </div>
+
+
+
+</div>
+<a href="#home">Back Home</a>

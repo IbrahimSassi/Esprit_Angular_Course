@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Angular Course</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+    <style>
+        .input-field label {
+            color: steelblue;
+            opacity: 0.5;
+        }
+
+        /* label focus color */
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid brown;
+            box-shadow: 0 1px 0 0 blueviolet;
+        }
+
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid aqua;
+            box-shadow: 0 1px 0 0 aquamarine;
+        }
+
+
+    </style>
+</head>
+<body ng-app="app">
+
+<div class="container">
+
+    <!--For Routing -->
+
+    <ng-view></ng-view>
+
+
+</div>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/bootstrap.js"></script>
+<!-- Compiled and minified JavaScript -->
+
+<script src="lib/angular.js"></script>
+<script src="lib/angular-route.min.js"></script>
+
+<script src="lib/materialize.min.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/CalculationController.js"></script>
+<script src="js/ngRepeatController.js"></script>
+<script src="js/HomeController.js"></script>
+<script src="js/UserController.js"></script>
+<script src="js/CreateUserController.js"></script>
+<script src="js/EditUserController.js"></script>
+<script src="js/CalculationService.js"></script>
+<script src="js/UserService.js"></script>
+</body>
+</html>

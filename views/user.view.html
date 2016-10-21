@@ -1,0 +1,22 @@
+<h4>User With Id {{ idUser }}</h4>
+
+
+<h4></h4>
+
+<div class="card" style="width: 350px;margin-left: 250px">
+    <div class="card-image waves-effect waves-block waves-light">
+        <img height="50%" width="50%" class="activator" src="{{myUser.image}}">
+    </div>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{myUser.name}} <i class="material-icons right">More Detail</i></span>
+        <p><a href="#"></a></p>
+    </div>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">{{myUser.name}}<i class="material-icons right">Close</i></span>
+        <p>{{myUser.country}}</p>
+        <p>{{myUser.salary}}</p>
+    </div>
+</div>
+<a href="#users/edit/{{myUser.id}}">Modify</a> <br>
+<a href="#home">Back Home</a>
+

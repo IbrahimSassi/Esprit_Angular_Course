@@ -16,7 +16,7 @@
         }
     }
 
-    ngRepeatController.$inject  = ['$scope','UserService'];
+    ListController.$inject  = ['$scope','UserService'];
 
     angular.module("app")
         .controller('ListController',ListController);

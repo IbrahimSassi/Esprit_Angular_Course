@@ -14,6 +14,15 @@
         ];
         
         this.add= function (user) {
+            var max=0;
+            this.users.forEach(function (user1) {
+                if (user1.id>max){
+                    max = user1.id;
+                }
+            })
+
+            user.image="img/default.png";
+            user.id = max+1;
             this.users.push(user);
 
         };
@@ -23,10 +32,15 @@
             for (var i=0;i<UserService.users;i++)
             {
                 if(UserService.users[i].id==user.id){
-                    UserService.users[i]= $scope.myUser;
+                    UserService.users[i]= user;
                 }
             }
 
+        }
+
+
+        this.delete = function (index) {
+            this.users.splice(index,1);
         }
 
 

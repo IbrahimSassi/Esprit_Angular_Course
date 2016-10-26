@@ -4,7 +4,7 @@
 
 (function (angular) {
     'use strict';
-    function UserController($scope,$routeParams,UserService,$filter) {
+    function UserController($scope,$routeParams,UserService) {
 
         $scope.idUser = $routeParams.id;
         $scope.myUser = UserService.getOneById($scope.idUser);
@@ -13,7 +13,7 @@
 
     }
 
-    UserController.$inject = ['$scope','$routeParams','UserService','$filter'];
+    UserController.$inject = ['$scope','$routeParams','UserService'];
 
     angular.module("app").controller('UserController', UserController);
 

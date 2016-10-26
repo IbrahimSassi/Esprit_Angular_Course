@@ -8,8 +8,7 @@
         </div>
         <ul ng-repeat="person in people | filter:searchText" class="collection">
             <li class="collection-item avatar">
-                <img src="{{person.image}}" alt="" class="circle" ng-if="person.image">
-                <img src="../img/default.png" alt="" class="circle" ng-if="!person.image">
+                <img src="{{person.image}}" alt="" class="circle" >
                 <h5 style="font-weight: bold">
                     {{person.name | capitalize}}
                 </h5>
@@ -20,7 +19,9 @@
                     <i class="fa fa-money" aria-hidden="true"></i>
                     Salary : {{person.salary}}
                 </p>
-                <a href="#users/{{person.id}}">See Details</a>
+                <a href="#users/{{person.id}}">See Details</a><br>
+                <button ng-click="delete($index)">Delete</button>
+
             </li>
         </ul>
     </div>

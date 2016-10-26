@@ -7,22 +7,19 @@
     'use strict';
     function ngRepeatController($scope,UserService) {
         $scope.people = UserService.getAll();
+
+        $scope.delete = function (id) {
+            console.log(id);
+            UserService.delete(id);
+            $scope.people = UserService.getAll();
+
+        }
     }
+
     ngRepeatController.$inject  = ['$scope','UserService'];
 
-    angular.module("app").controller('ngRepeatController',ngRepeatController);
-
-
-
-    //My Filter
     angular.module("app")
-        .filter('capitalize',function () {
-            return function (item,params) {
-                return item.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-            };
-        });
-
-
+        .controller('ngRepeatController',ngRepeatController);
 
 
 

@@ -5,7 +5,7 @@
 
 (function (angular) {
     'use strict';
-    function EditUserController($scope,UserService,$location,$filter,$routeParams) {
+    function EditUserController($scope,UserService,$location,$routeParams) {
 
         $scope.myUser = UserService.getOneById($routeParams.id);
 
@@ -18,7 +18,7 @@
 
     }
 
-    EditUserController.$inject = ['$scope','UserService','$location','$filter','$routeParams'];
+    EditUserController.$inject = ['$scope','UserService','$location','$routeParams'];
 
     angular.module("app").controller('EditUserController', EditUserController);
 

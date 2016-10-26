@@ -5,7 +5,7 @@
 
 (function (angular) {
     'use strict';
-    function ngRepeatController($scope,UserService) {
+    function ListController($scope,UserService) {
         $scope.people = UserService.getAll();
 
         $scope.delete = function (id) {
@@ -19,7 +19,7 @@
     ngRepeatController.$inject  = ['$scope','UserService'];
 
     angular.module("app")
-        .controller('ngRepeatController',ngRepeatController);
+        .controller('ListController',ListController);
 
 
 
